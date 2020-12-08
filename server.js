@@ -5,8 +5,8 @@ var bodyParser = require('body-parser'),
 
     argv = require('minimist')(process.argv.slice(2), {
       default: {
-        token: null,
-        webhook: null,
+        token: process.env.TOKEN,
+        webhook: process.env.WEBHOOK,
         norage: false,
         port: 3000
       }
